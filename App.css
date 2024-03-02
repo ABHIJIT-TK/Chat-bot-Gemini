@@ -1,0 +1,117 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #1f2022; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+/* Chat container */
+.chat-container {
+  width: 600px; /* Adjust width as needed */
+  margin: 50px auto;
+  border-radius: 12px; /* Rounded corners */
+  background-color: #292b2c; /* Darker background for container */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Chat header */
+.chat-header {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: inherit; /* Inherit text color from body */
+}
+
+/* Chat history */
+.chat-history {
+  flex: 1; /* Allow chat history to fill remaining space */
+  padding: 1rem;
+  overflow-y: scroll; /* Enable scrolling for long chat history */
+}
+
+/* Individual chat message */
+.chat-message {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.chat-message.user {
+  justify-content: flex-end;
+}
+
+.chat-message.model {
+  justify-content: flex-start;
+}
+
+/* User message bubble */
+.user-message {
+  padding: 1rem;
+  border-radius: 12px; /* Rounded corners */
+  background-color: #3e444a; /* Darker accent color for user messages */
+  color: inherit; /* Inherit text color from body */
+  max-width: 70%;
+}
+
+/* Model message bubble */
+.model-message {
+  padding: 1rem;
+  border-radius: 12px; /* Rounded corners */
+  background-color: #474d53; /* Lighter accent color for model messages */
+  max-width: 70%;
+}
+
+/* Message content */
+.message-content {
+  font-size: 1rem;
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Input container */
+.input-container {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Input field */
+input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1rem;
+  background-color: #242729; /* Darker background for input field */
+  color: inherit; /* Inherit text color from body */
+}
+
+input:focus {
+  outline: none; /* Remove default focus outline */
+  border: 1px solid #fff; /* White border on focus */
+}
+
+/* Send button */
+button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  background-color: #3e444a; /* Same accent color as user messages */
+  color: inherit; /* Inherit text color from body */
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+button:hover {
+  background-color: #474d53; /* Lighter shade on hover */
+}
